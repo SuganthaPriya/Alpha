@@ -15,6 +15,8 @@ namespace TrainerConsultancy.Controllers
     {
         private TrainerConsultancyEntities db = new TrainerConsultancyEntities();
         
+
+
         // GET: Client
         public ActionResult Index()
         {
