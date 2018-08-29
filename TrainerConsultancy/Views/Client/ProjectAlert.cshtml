@@ -1,0 +1,7 @@
+﻿@{
+    if (ViewData["isNotProjectable"] != null)
+    {
+        string isNotProjectable = ViewData["isNotProjectable"].ToString();
+        @Html.Label(isNotProjectable);
+    }
+}

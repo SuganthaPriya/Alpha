@@ -1,0 +1,17 @@
+﻿@model TrainerConsultancy.ViewModel.TrainerViewModel
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("Index", "Trainer", FormMethod.Post))
+{
+    <p>Enter Start Date:</p>
+    @Html.TextBoxFor(x => x.StartDate)
+    <p>Enter End Date:</p>
+    @Html.TextBoxFor(x => x.EndDate)
+    <p></p>
+    <p></p>
+    <input type="submit" />
+
+}
+

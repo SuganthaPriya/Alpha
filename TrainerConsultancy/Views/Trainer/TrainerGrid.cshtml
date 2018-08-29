@@ -1,0 +1,34 @@
+﻿@model List<TrainerConsultancy.ViewModel.TrainerViewModel>
+
+@{
+    Layout = null;
+   
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TrainerGrid</title>
+</head>
+<body>
+    <div>
+        <h4>TrainerViewModel</h4>
+        <hr />
+        <table>
+            @foreach (var t in Model)
+            {
+                <tr id="tblTrainer">
+                    <td>@t.TrainerID</td>
+                    <td><input type="button" value="Check Projection Status" class="btnStatus" onclick="location.href='@Url.Action("CheckProjection", "Client", new { id = t.TrainerID ,Sdate =t.StartDate,Edate=t.EndDate})'" /></td>
+                    <td>@t.TrainerName</td>
+                    <td>@t.Experience</td>
+                    <td>@t.Location</td>
+                    <td></td>
+                </tr>
+            }
+        </table>
+        @{Html.RenderPartial("~/Views/Client/ProjectAlert.cshtml");}
+    </div>    
+</body>
+</html>

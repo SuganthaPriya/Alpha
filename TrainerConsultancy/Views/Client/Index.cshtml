@@ -1,0 +1,21 @@
+﻿
+@model TrainerConsultancy.ViewModel.ProjectionViewModel
+
+
+@using (Html.BeginForm("CreateProjection", "Client", FormMethod.Post))
+{
+    <p>Enter VenderID:</p> @Html.TextBoxFor(x => x.VendorID)
+    <p>
+        Enter Trainer's ID:
+    </p>
+    @Html.DropDownListFor(x=>x.TrainerID, new SelectList(Model.TrainerList.Select(x=>x.Value)))
+    <p>
+        Enter Start Date
+    </p>
+    @Html.TextBoxFor(x => x.ProjectFrom)
+    <p>
+        Enter End Date
+    </p>
+    @Html.TextBoxFor(x => x.ProjectTo)
+   <p></p> <input type="submit" value="Project"/>
+}
